@@ -2,7 +2,7 @@ const form = document.getElementById('form');
 const convertButton = document.getElementById('convert-btn');
 const output = document.getElementById('output');
 
-const convertToRoman = num => {
+const convertToRoman = (num) => {
   const ref = [
     ['M', 1000],
     ['CM', 900],
@@ -16,7 +16,7 @@ const convertToRoman = num => {
     ['IX', 9],
     ['V', 5],
     ['IV', 4],
-    ['I', 1]
+    ['I', 1],
   ];
   const res = [];
 
@@ -56,7 +56,20 @@ const clearOutput = () => {
   output.classList.remove('alert');
 };
 
-form.addEventListener('submit', e => {
+const updateUI = () => {
+    const numStr = document.getElementById('number').value;
+    const int = parseInt(numStr, 10);
+  
+    output.classList.remove('hidden');
+  
+    clearOutput();
+  
+    if (isValid(numStr, int)) {
+      output.innerText = convertToRoman(int);
+    }
+  };
+
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   updateUI();
 });
@@ -64,16 +77,3 @@ form.addEventListener('submit', e => {
 convertButton.addEventListener('click', () => {
   updateUI();
 });
-
-const updateUI = () => {
-  const numStr = document.getElementById('number').value;
-  const int = parseInt(numStr, 10);
-
-  output.classList.remove('hidden');
-
-  clearOutput();
-
-  if (isValid(numStr, int)) {
-    output.innerText = convertToRoman(int);
-  }
-};
