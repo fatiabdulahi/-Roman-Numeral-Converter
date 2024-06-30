@@ -20,7 +20,7 @@ const convertToRoman = (num) => {
   ];
   const res = [];
 
-  ref.forEach(function (arr) {
+  ref.forEach((arr) => {
     while (num >= arr[1]) {
       res.push(arr[0]);
       num -= arr[1];
@@ -57,17 +57,14 @@ const clearOutput = () => {
 };
 
 const updateUI = () => {
-    const numStr = document.getElementById('number').value;
-    const int = parseInt(numStr, 10);
-  
-    output.classList.remove('hidden');
-  
-    clearOutput();
-  
-    if (isValid(numStr, int)) {
-      output.innerText = convertToRoman(int);
-    }
-  };
+  const numStr = document.getElementById('number').value;
+  const int = parseInt(numStr, 10);
+  output.classList.remove('hidden');
+  clearOutput();
+  if (isValid(numStr, int)) {
+    output.innerText = convertToRoman(int);
+  }
+};
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
