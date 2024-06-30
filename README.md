@@ -249,21 +249,20 @@ Examples:
 
 Folow these steps to set up the project on your local machine Ensure you have the following software installed on your machine
 
-# git clone 
+``` git clone ```
 
-https://github.com/fatiabdulahi/-Roman-Numeral-Converter/pull/1
+https://github.com/fatiabdulahi/-Roman-Numeral-Converter/
 
 ## Usage 🎯
 
 you can access to my project through git clone -git clone the HTTP or My SSH code link from the repository you wat to clone
 
-# git clone
+``` git clone https://github.com/fatiabdulahi/-Roman-Numeral-Converter/```
 
 ## Features ⭐
 -javascript
-
 -github usage
--palindrome checker project
+Roman Numeral converter project
 
 
 ## Author 👩‍💻 FATIMA ABDULLAHI
